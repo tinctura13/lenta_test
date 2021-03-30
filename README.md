@@ -18,3 +18,6 @@
 ### How to use:
     - Import * from linear_algebra.py
     - See examples of usage in main.py
+
+### Requirements:
+    - Python >= 3.8
