@@ -6,9 +6,8 @@ input_file = sys.argv[0]
 
 def primitive_spam_filter():
     """
-    Primitive script that works on heuristics and pretend to filter spam
-    messages from the mail. Spam messages considered as words with integers
-    inside them.
+    Primitive script that pretend to filter spam messages from the mail.
+    Spam messages considered as words with integers inside them.
 
         :return: It saves all messages identified as not spam to 'result.csv'
     """
