@@ -9,9 +9,9 @@ FROM
   warehouses 
   JOIN transactions USING(whs_id) 
 WHERE 
-  trn_date IN (
+  (acc_id, trn_date) IN (
     SELECT 
-      MIN(trn_date) AS trn_date 
+      acc_id, MIN(trn_date) AS trn_date 
     FROM 
       transactions 
     GROUP BY 
