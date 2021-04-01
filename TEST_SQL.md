@@ -1,7 +1,7 @@
 ### 1. Для каждого клиента выведете магазин, в котором он совершил первую покупку, и ее дату.
 
 
-`SELECT acc_id, whs_id, trn_date FROM warehouses JOIN transactions USING(whs_id) WHERE trn_date IN ( SELECT MIN(trn_date) AS trn_date FROM transactions GROUP BY acc_id ) ORDER BY 1, 3`
+`SELECT acc_id, whs_id, trn_date FROM warehouses JOIN transactions USING(whs_id) WHERE(acc_id, trn_date) IN ( SELECT acc_id, MIN(trn_date) AS trn_date FROM transactions GROUP BY acc_id) ORDER BY 1, 3`
 
 
 ### 2. Выведете клиентов, которые: - не посещали форматы «У Дома» и «Гипермаркет» более 8 недель; - формат «Авто» более 4 недель.
